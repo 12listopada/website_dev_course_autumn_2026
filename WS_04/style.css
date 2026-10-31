@@ -1,0 +1,63 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+header, footer {
+  background-color: #eeeeee;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 10px;
+}
+
+section {
+  margin: 30px 0;
+}
+
+/* Task 2: Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: lightgreen;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Task 3: Flexbox Layout */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Task 4: Media Queries */
+.responsive-box {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .responsive-box {
+    background-color: lightcoral;
+  }
+}
+
+@media (min-width: 601px) {
+  .responsive-box {
+    background-color: lightseagreen;
+  }
+}
