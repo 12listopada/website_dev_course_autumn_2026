@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workshop 5 - Responsive Design</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        h2 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TASK 1: RESPONSIVE LAYOUT -->
+
+    <h2>Task 1: Responsive Layout</h2>
+
+    <div class="responsive-container">
+        <div class="column">Column 1</div>
+        <div class="column">Column 2</div>
+    </div>
+
+
+    <!-- TASK 2: RESPONSIVE IMAGE -->
+
+    <h2>Task 2: Responsive Image</h2>
+
+    <img src="mypicture.jpg"
+         alt="My picture"
+         class="filter-image responsive-image">
+
+
+    <!-- TASK 3: MEDIA QUERIES -->
+
+    <h2>Task 3: Media Queries</h2>
+
+    <div class="media-query-box">
+        Resize the window to see the effect
+    </div>
+
+
+    <!-- TASK 4: RESPONSIVE NAVIGATION BAR -->
+
+    <h2>Task 4: Responsive Navigation Bar</h2>
+
+    <nav class="responsive-nav">
+
+        <button class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobile-nav">
+            ☰ Menu
+        </button>
+
+        <ul class="nav-list" id="mobile-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- PREVIOUS WORKSHOP EXERCISES -->
+
+    <h2>Previous Workshop Exercises</h2>
+
+    <!-- CSS Transition -->
+
+    <button class="transition-button">
+        Hover me
+    </button>
+
+
+    <!-- CSS Animation -->
+
+    <div class="animation-box"></div>
+
+
+    <!-- CSS Pseudo-classes -->
+
+    <ul class="pseudo-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+
+    <!-- CSS Pseudo-elements -->
+
+    <blockquote class="quote">
+        This is a sample quote.
+    </blockquote>
+
+
+    <!-- Content Box -->
+
+    <div class="content-box">
+        <h3>Sample Heading</h3>
+        <p>This is a sample paragraph.</p>
+    </div>
+
+
+    <!-- PERSONAL PAGE CONTENT -->
+
+    <h1 style="color: red;">
+        Welcome to Oliwia's Page
+    </h1>
+
+    <p>This is a paragraph.</p>
+
+
+    <!-- Hobbies -->
+
+    <h2>My hobbies</h2>
+
+    <ol>
+        <li>reading books</li>
+        <li>skiing</li>
+        <li>traveling</li>
+    </ol>
+
+
+    <!-- Favorite Foods -->
+
+    <h2>My favorite foods</h2>
+
+    <ul>
+        <li>pizza</li>
+        <li>pasta</li>
+        <li>salad</li>
+    </ul>
+
+
+    <!-- External Link -->
+
+    <a href="https://www.laurea.fi">
+        Visit Laurea
+    </a>
+
+
+    <!-- Table -->
+
+    <table>
+        <tr>
+            <th>Courses 2027</th>
+            <th>Period</th>
+        </tr>
+
+        <tr>
+            <td>Business Data and Analytics</td>
+            <td>Autumn</td>
+        </tr>
+
+        <tr>
+            <td>Entrepreneurship</td>
+            <td>Spring</td>
+        </tr>
+    </table>
+
+
+    <!-- Form -->
+
+    <form>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+
+    <!-- JAVASCRIPT: RESPONSIVE MENU -->
+
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const navList = document.querySelector(".responsive-nav .nav-list");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = navList.classList.toggle("active");
+
+            menuButton.setAttribute("aria-expanded", isOpen);
+        });
+    </script>
+
+</body>
+</html>
