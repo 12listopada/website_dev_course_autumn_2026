@@ -1,0 +1,598 @@
+
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ef;
+    color: #252a38;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+}
+
+/* Navigation */
+header {
+    background-color: #192538;
+    color: #ffffff;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #c7b9dc;
+}
+
+/* Hero section */
+.hero {
+    background-color: #192538;
+    color: #ffffff;
+    padding: 90px 30px 95px;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #c7b9dc;
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: clamp(42px, 5vw, 68px);
+    margin: 25px 0;
+}
+
+.hero-content > p:not(.subtitle) {
+    max-width: 550px;
+    color: #d1d6df;
+    font-size: 17px;
+}
+
+.hero-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c7b9dc;
+    text-decoration: none;
+}
+
+.hero-link:hover {
+    color: #c7b9dc;
+}
+
+/* Moon image */
+
+/* Moon image */
+@media (min-width: 901px) {
+    .hero {
+        background-image:
+            linear-gradient(
+                90deg,
+                #192538 0%,
+                rgba(25, 37, 56, 0.98) 35%,
+                rgba(25, 37, 56, 0.75) 65%,
+                rgba(25, 37, 56, 0.15) 100%
+            ),
+            url("images/moon.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-content {
+        max-width: 1150px;
+    }
+
+    .hero h1 {
+        max-width: 750px;
+    }
+}
+
+
+/* Introduction */
+.introduction {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 100px 30px;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-size: 42px;
+}
+
+.introduction p {
+    font-size: 18px;
+    color: #555b65;
+}
+
+/* Explore section */
+.explore {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 30px 30px 110px;
+}
+
+.explore h2 {
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.explore-grid article {
+    border-top: 2px solid #192538;
+    padding: 25px 5px;
+}
+
+.explore-grid h3 {
+    font-size: 27px;
+}
+
+.explore-grid p {
+    color: #555b65;
+}
+
+.explore-grid a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.explore-grid a:hover {
+    color: #74618e;
+}
+
+/* Footer */
+footer {
+    background-color: #192538;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+    .hero {
+        padding: 80px 30px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        padding: 70px 25px 85px;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 9vw, 44px);
+    }
+
+    .hero-content > p:not(.subtitle) {
+        font-size: 16px;
+    }
+
+    .introduction {
+        padding: 70px 25px;
+    }
+
+    .introduction h2 {
+        font-size: 34px;
+    }
+
+    .explore {
+        padding: 20px 25px 70px;
+    }
+
+    .explore h2 {
+        font-size: 32px;
+    }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Explore images */
+.explore-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.explore-grid article {
+    min-width: 0;
+}
+
+.explore-grid img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    transition: opacity 0.3s ease;
+}
+
+.explore-grid img:hover {
+    opacity: 0.85;
+}
+
+/* Responsive images */
+@media (max-width: 700px) {
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explore-grid img {
+        height: 220px;
+    }
+}
+
+
+/* Article pages */
+.article-page {
+    background-color: #f5f3ef;
+}
+
+.article-header {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 100px 30px 65px;
+    text-align: center;
+}
+
+.article-label {
+    color: #827099;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.article-header h1 {
+    font-size: clamp(40px, 5vw, 68px);
+    margin: 25px 0;
+}
+
+.article-intro {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 19px;
+    color: #555b65;
+}
+
+.article-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+
+.article-content section {
+    margin-bottom: 65px;
+}
+
+.article-content h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.article-content p {
+    color: #555b65;
+    font-size: 17px;
+}
+
+.sleep-stages {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.sleep-stages > div {
+    border-top: 2px solid #192538;
+    padding-top: 20px;
+}
+
+.stage-number {
+    color: #827099;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.sleep-stages h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.science-fact {
+    background-color: #e9e5ee;
+    padding: 30px 35px;
+    margin-bottom: 65px;
+}
+
+.science-fact p {
+    color: #252a38;
+}
+
+.next-article {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #192538;
+    text-decoration: none;
+}
+
+.next-article:hover {
+    color: #827099;
+}
+
+/* Article mobile layout */
+@media (max-width: 700px) {
+    .article-header {
+        padding: 65px 25px 40px;
+    }
+
+    .article-content {
+        padding: 20px 25px 70px;
+    }
+
+    .article-content h2 {
+        font-size: 31px;
+    }
+
+    .sleep-stages {
+        grid-template-columns: 1fr;
+    }
+
+    .science-fact {
+        padding: 25px;
+    }
+}
+
+/* Dreams page */
+.dreams-image {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 30px;
+}
+
+.dreams-image img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.dream-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.dream-facts > div {
+    border-top: 2px solid #192538;
+    padding-top: 20px;
+}
+
+.dream-facts h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+/* Dreams mobile layout */
+@media (max-width: 700px) {
+    .dreams-image {
+        margin-bottom: 45px;
+        padding: 0 25px;
+    }
+
+    .dreams-image img {
+        height: 250px;
+    }
+
+    .dream-facts {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sleep Science - image and text layout */
+.science-introduction {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+}
+
+.science-introduction-text {
+    min-width: 0;
+}
+
+.science-introduction img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .science-introduction {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .science-introduction img {
+        height: 240px;
+    }
+}
+
+/* Better Sleep page */
+.better-sleep-feature {
+    max-width: 1100px;
+    margin: 0 auto 90px;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 55px;
+}
+
+.better-sleep-feature img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.better-sleep-feature h2 {
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.better-sleep-feature p:not(.article-label) {
+    font-size: 17px;
+    color: #555b65;
+}
+
+.sleep-tips {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.sleep-tips > div {
+    border-top: 2px solid #192538;
+    padding-top: 20px;
+}
+
+.sleep-tips h3 {
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+.evening-routine {
+    background-color: #e9e5ee;
+    padding: 40px;
+}
+
+.evening-routine ol {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+.evening-routine li {
+    padding-left: 8px;
+}
+
+/* Better Sleep mobile layout */
+@media (max-width: 700px) {
+    .better-sleep-feature {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 55px;
+        padding: 0 25px;
+    }
+
+    .better-sleep-feature img {
+        height: 260px;
+    }
+
+    .better-sleep-feature h2 {
+        font-size: 34px;
+    }
+
+    .sleep-tips {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .evening-routine {
+        padding: 25px;
+    }
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 700px) {
+    .navbar {
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 6px 0;
+        font-size: 13px;
+    }
+}
